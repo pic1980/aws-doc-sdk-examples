@@ -1,5 +1,7 @@
 # AWS SDK for Rust code examples
 
+> ⚠ Important - this branch is temporary for a build release without the WASM examples
+
 ## Purpose
 
 These examples demonstrate how to perform several operations using the AWS SDK for Rust.

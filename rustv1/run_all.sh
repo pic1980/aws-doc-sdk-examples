@@ -8,7 +8,7 @@ DIRS=(
   cross_service
   examples
   lambda
-  webassembly
+  #webassembly
 )
 
 ACTIONS=(
