@@ -108,7 +108,7 @@ class PluginStack extends cdk.Stack {
           type: "FARGATE",
           subnets: vpc.selectSubnets().subnetIds,
           securityGroupIds: [sg.securityGroupId],
-          maxvCpus: 1,
+          maxvCpus: 4,
         },
       },
     );

@@ -20,7 +20,20 @@ class ImageStack extends Stack {
           imageScanOnPush: true,
           removalPolicy: RemovalPolicy.RETAIN,
         });
+        // ADDED MANUALLY: Policy to allow cross-account image access.
+        // While other resources policies in AWS either require or accept a resource section,
+        // Cfn for ECR does not allow us to specify a resource policy. It will fail if a resource section is present at all.
+        //
+        // repository.addToResourcePolicy(new cdk.aws_iam.PolicyStatement({
+        //   effect: cdk.aws_iam.Effect.ALLOW,
+        //   principals: [new cdk.aws_iam.ArnPrincipal(`arn:aws:iam::${acctConfig[language].account_id}:role/BatchExecutionRole-${language}`)],
+        //   actions: [
+        //     "ecr:*"
+        //   ],
+        //   resources: [repository.repositoryArn]
+        // }));
       }
+
     }
   }
 }
